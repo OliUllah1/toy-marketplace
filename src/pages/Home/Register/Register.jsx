@@ -1,11 +1,31 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookF,FaGithub } from "react-icons/fa";
+import { AuthContext } from '../../../Provider/AuthProvider';
 const Register = () => {
+  const {createUser}=useContext(AuthContext);
+
+  const handleRegister =(event)=>{
+    event.preventDefault()
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    const photoUrl = form.photoUrl.value;
+    console.log(name,email,password,photoUrl)
+    createUser(email,password)
+    .then(result=>{
+      const user = result.user;
+      console.log(user)
+    })
+    .catch(error=>{
+      console.log(error)
+    })
+  }
     return (
         <div className='w-1/3 mx-auto shadow-2xl bg-base-100 border-0 p-10 mb-5 rounded-xl'>
             <h1 className='font-bold text-3xl text-center'>Register Now</h1>
-            <form>
+            <form onSubmit={handleRegister}>
             <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>
