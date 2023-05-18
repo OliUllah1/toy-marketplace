@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookF,FaGithub } from "react-icons/fa";
+import { AuthContext } from '../../../Provider/AuthProvider';
+import { Result } from 'postcss';
 
 const Login = () => {
+  const {signIn}=useContext(AuthContext)
+  const handleLogin =(event)=>{
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    signIn(email,password)
+    .then(result=>{
+      const user = result.user;
+      console.log(user)
+    })
+    .catch(error=>{
+      console.log(error)
+    })
+  }
     return (
         <div className='w-1/3 mx-auto shadow-2xl bg-base-100 border-0 p-10 mb-5 rounded-xl'>
             <h1 className='font-bold text-3xl text-center'>Login Now</h1>
-            <form>
+            <form onSubmit={handleLogin}>
             <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
