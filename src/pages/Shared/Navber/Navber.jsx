@@ -6,7 +6,7 @@ import logo from '../../../assets/images/toy-logo.png'
 
 const Navber = () => {
     return (
-        <div className="flex justify-between items-center bg-white">
+        <div className="flex justify-between items-center bg-white shadow-md mb-5">
     <div className="navbar">
       <div className=" flex-1">
         <div className="dropdown">
@@ -82,9 +82,9 @@ const Navber = () => {
             </li>
           </ul>
         </div>
-        <div className='w-20 lg:w-28 kg:h-20 flex items-center relative'>
+        <div className='w-20 lg:w-20 kg:h-20 flex items-center'>
         <img className="w-full h-full object-center" src={logo} alt="" />
-        <h3 className=' hidden lg:flex absolute left-20'><span className='text-3xl font-bold text-[#ff6600]'>T</span><span className='text-3xl font-bold text-sky-500'>O</span><span className='text-3xl font-bold text-[#99cc33]'>Y</span><span className='text-3xl font-bold text-pink-500'>S</span> <span className='ml-3 font-bold text-2xl mt-1 text-yellow-300 '>House</span></h3>
+        <h3 className=' hidden lg:flex '><span className='text-3xl font-bold text-[#ff6600]'>T</span><span className='text-3xl font-bold text-sky-500'>O</span><span className='text-3xl font-bold text-[#99cc33]'>Y</span><span className='text-3xl font-bold text-pink-500'>S</span> <span className='ml-3 font-bold text-2xl mt-1 text-yellow-300 '>House</span></h3>
         </div>
       </div>
       <div>
