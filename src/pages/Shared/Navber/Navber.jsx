@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../assets/images/toy-logo.png'
-
-
+import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Navber = () => {
+    const {user,logOut}=useContext(AuthContext)
+    const userImages = user?.photoURL
+    const userName =user?.displayName
+    const handleLogOut=()=>{
+        logOut()
+        .then(()=>{})
+        .catch(error=>{
+            console.log(error)
+        })
+    }
     return (
         <div className="flex justify-between items-center bg-white shadow-md mb-5">
     <div className="navbar">
@@ -134,7 +143,20 @@ const Navber = () => {
         </ul>
       </div>
       <div className=" font-semibold ml-5">
-      <Link to='/login'><button className="px-8 rounded-lg py-2 btn-outline border btn-info">Log In</button></Link>
+        {
+            user?<div className="flex items-center gap-2">
+            <div  className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <img className="w-full" title={userName} src={userImages} />
+              </div>
+            </div>
+  
+            <div>
+            <button onClick={handleLogOut} className="px-8 rounded-lg py-2 btn-outline border btn-info">Log Out</button>
+            </div>
+          </div>:<Link to='/login'><button className="px-8 rounded-lg py-2 btn-outline border btn-info">Log In</button></Link>
+        }
+      
         {/* {
           user?  <div className="flex items-center gap-2">
           <div  className="btn btn-ghost btn-circle avatar">

@@ -1,23 +1,31 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookF,FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../../Provider/AuthProvider';
 import { Result } from 'postcss';
 
 const Login = () => {
+  const [error,setError]=useState('');
   const {signIn}=useContext(AuthContext)
   const handleLogin =(event)=>{
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
+    setError('')
+    if(password.length<6){
+      setError('provide the 6 character password and try again')
+      return;
+    }
     signIn(email,password)
     .then(result=>{
       const user = result.user;
       console.log(user)
+      form.reset();
     })
     .catch(error=>{
       console.log(error)
+      setError(error.message)
     })
   }
     return (
@@ -28,15 +36,18 @@ const Login = () => {
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" name='email' placeholder="email" className="input input-bordered" />
+          <input type="email" name='email' placeholder="email" className="input input-bordered" required/>
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" name='password' placeholder="password" className="input input-bordered" />
+          <input type="password" name='password' placeholder="password" className="input input-bordered" required />
           <p className='mt-3'>New here?<Link to='/register'><a className="link link-accent">create an a account</a></Link></p>
         </div>
+        {
+          error?<p className='mt-2 text-red-500'>{error}</p>:''
+        }
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
         </div>
