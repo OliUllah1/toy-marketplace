@@ -88,12 +88,12 @@ const Navber = () => {
         </div>
       </div>
       <div>
-      <div className=" hidden lg:flex">
+      <div className=" hidden lg:flex items-center">
         <ul className="menu menu-horizontal px-1 font-semibold text-white">
           <li>
             <NavLink
               to="/"
-              className={({ isActive }) => (isActive ? "text-blue-600" : "")}
+              className={({ isActive }) => (isActive ? "text-blue-500" : " text-gray-800")}
             >
               Home
             </NavLink>
@@ -109,7 +109,7 @@ const Navber = () => {
           <li>
             <NavLink
               to="/mytoys"
-              className={({ isActive }) => (isActive ? "text-blue-400" : "text-gray-800")}
+              className={({ isActive }) => (isActive ? "text-blue-500" : "text-gray-800")}
             >
               My Toys
             </NavLink>
@@ -117,7 +117,7 @@ const Navber = () => {
           <li>
             <NavLink
               to="/addtoy"
-              className={({ isActive }) => (isActive ? "text-blue-400" : "text-gray-800")}
+              className={({ isActive }) => (isActive ? "text-blue-500" : "text-gray-800")}
             >
               Add Toy
             </NavLink>
@@ -125,7 +125,7 @@ const Navber = () => {
           <li>
             <NavLink
               to="/blog"
-              className={({ isActive }) => (isActive ? "text-blue-400" : "text-gray-800")}
+              className={({ isActive }) => (isActive ? "text-blue-500" : "text-gray-800")}
             >
               Blog
             </NavLink>
@@ -133,8 +133,8 @@ const Navber = () => {
           
         </ul>
       </div>
-      <div className=" font-semibold">
-      <Link to='login'><button className="px-5 py-1 rounded text-gray-600 border border-blue-700 hover:bg-blue-400">Log In</button></Link>
+      <div className=" font-semibold ml-5">
+      <Link to='/login'><button className="px-8 rounded-lg py-2 btn-outline border btn-info">Log In</button></Link>
         {/* {
           user?  <div className="flex items-center gap-2">
           <div  className="btn btn-ghost btn-circle avatar">
@@ -164,3 +164,5 @@ const Navber = () => {
 };
 
 export default Navber;
+
+//text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2
