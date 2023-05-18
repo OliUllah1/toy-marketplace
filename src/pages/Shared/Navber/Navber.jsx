@@ -40,15 +40,51 @@ const Navber = () => {
                 Home
               </NavLink>
             </li>
-            
-            
-           
-           
+            <li>
+              <NavLink
+                to="/alltoys"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-400 font-semibold" : ""
+                }
+              >
+                All Toys
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/mytoys"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-400 font-semibold" : ""
+                }
+              >
+                My Toys
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/addtoy"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-400 font-semibold" : ""
+                }
+              >
+               Add Toy
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/blog"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-400 font-semibold" : ""
+                }
+              >
+               Blog
+              </NavLink>
+            </li>
           </ul>
         </div>
-        <div className='w-28 h-20 flex items-center relative'>
-        <img className="w-full h-full" src={logo} alt="" />
-        <h3 className='flex absolute left-20'><span className='text-3xl font-bold text-[#ff6600]'>T</span><span className='text-3xl font-bold text-sky-500'>O</span><span className='text-3xl font-bold text-[#99cc33]'>Y</span><span className='text-3xl font-bold text-[#ff599b]'>S</span> <span className='ml-3 font-bold text-2xl mt-1 text-yellow-300 '>House</span></h3>
+        <div className='w-20 lg:w-28 kg:h-20 flex items-center relative'>
+        <img className="w-full h-full object-center" src={logo} alt="" />
+        <h3 className=' hidden lg:flex absolute left-20'><span className='text-3xl font-bold text-[#ff6600]'>T</span><span className='text-3xl font-bold text-sky-500'>O</span><span className='text-3xl font-bold text-[#99cc33]'>Y</span><span className='text-3xl font-bold text-pink-500'>S</span> <span className='ml-3 font-bold text-2xl mt-1 text-yellow-300 '>House</span></h3>
         </div>
       </div>
       <div>
@@ -64,34 +100,34 @@ const Navber = () => {
           </li>
           <li>
             <NavLink
-              to="/blog"
+              to="/alltoys"
               className={({ isActive }) => (isActive ? "text-blue-500" : " text-gray-800")}
             >
+              All Toys
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/mytoys"
+              className={({ isActive }) => (isActive ? "text-blue-400" : "text-gray-800")}
+            >
+              My Toys
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/addtoy"
+              className={({ isActive }) => (isActive ? "text-blue-400" : "text-gray-800")}
+            >
+              Add Toy
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/blog"
+              className={({ isActive }) => (isActive ? "text-blue-400" : "text-gray-800")}
+            >
               Blog
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/menulist"
-              className={({ isActive }) => (isActive ? "text-blue-400" : "text-gray-800")}
-            >
-              Menu List
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="recipe"
-              className={({ isActive }) => (isActive ? "text-blue-400" : "text-gray-800")}
-            >
-              Popular Recipe
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="register"
-              className={({ isActive }) => (isActive ? "text-blue-400" : "text-gray-800")}
-            >
-              Register
             </NavLink>
           </li>
           

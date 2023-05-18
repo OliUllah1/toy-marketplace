@@ -5,7 +5,7 @@ import {RouterProvider} from "react-router-dom";
 import router from './router/router.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <div className='px-10'>
+  <div className='lg:px-10'>
     <React.StrictMode>
       <RouterProvider router={router} />
     </React.StrictMode>
