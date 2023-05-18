@@ -147,7 +147,7 @@ const Navber = () => {
             user?<div className="flex items-center gap-2">
             <div  className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img className="w-full" title={userName} src={userImages} />
+                <img className="w-full object-center" title={userName} src={userImages} />
               </div>
             </div>
   
