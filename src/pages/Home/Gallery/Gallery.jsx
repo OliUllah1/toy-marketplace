@@ -5,7 +5,7 @@ const Gallery = () => {
 
         <div className=' bg-gray-300 rounded-lg px-5  pt-10'>
             <div className='flex items-center pb-8'>
-            <h1 className=' text-4xl font-semibold '> <span className=' text-5xl text-pink-500'>T</span>oys <span className=' text-5xl text-pink-500'>G</span>allery </h1>
+            <h1 className=' text-4xl font-semibold '> <span className=' text-5xl text-pink-500'>T</span>oys <span className='font-bold text-5xl text-pink-500'>G</span>allery </h1>
             <p className='font-bold text-4xl text-pink-500'>__________</p>
             </div>
             
