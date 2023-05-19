@@ -1,0 +1,278 @@
+[
+    {
+      "toyImage": "https://i.ibb.co/wNh5KGL/front-view-cute-little-baby-boy-cupcake-teddybear.jpg",
+      "toyName": "Teddy Bear",
+      "sellerName": "Seller 1",
+      "sellerEmail": "seller1@example.com",
+      "subCategory": "Teddy Bear",
+      "toyPrice": 19.99,
+      "rating": 4.5,
+      "availableQuantity": 10,
+      "detailDescription": "This is a cute and cuddly teddy bear that children will love. It is made with soft, high-quality materials and is perfect for snuggling and playtime."
+    },
+    {
+      "toyImage": "https://i.ibb.co/9n3jq2g/dinosaur-with-spikes-back.jpg",
+      "toyName": "Dinosaur Figure",
+      "sellerName": "Seller 2",
+      "sellerEmail": "seller2@example.com",
+      "subCategory": "Dinosaur",
+      "toyPrice": 14.99,
+      "rating": 4.2,
+      "availableQuantity": 8,
+      "detailDescription": "Let your child's imagination roam with this realistic dinosaur figure. It's perfect for dinosaur enthusiasts and encourages creative play."
+    },
+    {
+      "toyImage": "https://i.ibb.co/89fvnp2/n0jn-lo29-210929.jpg",
+      "toyName": "Interactive Robot",
+      "sellerName": "Seller 3",
+      "sellerEmail": "seller3@example.com",
+      "subCategory": "Robots",
+      "toyPrice": 39.99,
+      "rating": 4.7,
+      "availableQuantity": 15,
+      "detailDescription": "This interactive robot toy can dance, sing, and respond to voice commands. It provides hours of entertainment and helps develop problem-solving skills."
+    },
+    {
+      "toyImage": "https://i.ibb.co/9n3jq2g/dinosaur-with-spikes-back.jpg",
+      "toyName": "Puppy Plush Toy",
+      "sellerName": "Seller 4",
+      "sellerEmail": "seller4@example.com",
+      "subCategory": "Dogs",
+      "toyPrice": 9.99,
+      "rating": 4.0,
+      "availableQuantity": 12,
+      "detailDescription": "This adorable puppy plush toy is soft and huggable. It's a great companion for kids and brings a smile to their faces."
+    },
+    {
+      "toyImage": "https://i.ibb.co/89fvnp2/n0jn-lo29-210929.jpg",
+      "toyName": "Art Set",
+      "sellerName": "Seller 5",
+      "sellerEmail": "seller5@example.com",
+      "subCategory": "Art Supplies",
+      "toyPrice": 24.99,
+      "rating": 4.8,
+      "availableQuantity": 6,
+      "detailDescription": "Unleash your child's creativity with this comprehensive art set. It includes a variety of art supplies for drawing, coloring, and painting."
+    },
+    {
+      "toyImage": "https://i.ibb.co/wNh5KGL/front-view-cute-little-baby-boy-cupcake-teddybear.jpg",
+      "toyName": "Construction Blocks",
+      "sellerName": "Seller 6",
+      "sellerEmail": "seller6@example.com",
+      "subCategory": "Building Blocks",
+      "toyPrice": 29.99,
+      "rating": 4.4,
+      "availableQuantity": 20,
+      "detailDescription": "Build, create, and imagine with these colorful construction blocks. They help develop fine motor skills and promote logical thinking."
+    },
+    {
+      "toyImage": "https://i.ibb.co/9n3jq2g/dinosaur-with-spikes-back.jpg",
+      "toyName": "Remote Control Car",
+      "sellerName": "Seller 7",
+      "sellerEmail": "seller7@example.com",
+      "subCategory": "Cars",
+      "toyPrice": 34.99,
+      "rating": 4.6,
+      "availableQuantity": 3,
+      "detailDescription": "Experience the thrill of racing with this remote control car. It features realistic design and can reach impressive speeds."
+    },
+    {
+      "toyImage": "https://i.ibb.co/89fvnp2/n0jn-lo29-210929.jpg",
+      "toyName": "Puzzle Set",
+      "sellerName": "Seller 8",
+      "sellerEmail": "seller8@example.com",
+      "subCategory": "Puzzles",
+      "toyPrice": 12.99,
+      "rating": 4.3,
+      "availableQuantity": 9,
+      "detailDescription": "Challenge your child's mind with this set of puzzles. It includes various difficulty levels and stimulates critical thinking."
+    },
+    {
+      "toyImage": "https://i.ibb.co/9n3jq2g/dinosaur-with-spikes-back.jpg",
+      "toyName": "Musical Keyboard",
+      "sellerName": "Seller 9",
+      "sellerEmail": "seller9@example.com",
+      "subCategory": "Musical Instruments",
+      "toyPrice": 49.99,
+      "rating": 4.7,
+      "availableQuantity": 7,
+      "detailDescription": "Ignite your child's passion for music with this electronic keyboard. It features multiple instrument sounds and built-in songs."
+    },
+    {
+      "toyImage": "https://i.ibb.co/wNh5KGL/front-view-cute-little-baby-boy-cupcake-teddybear.jpg",
+      "toyName": "Doctor Playset",
+      "sellerName": "Seller 10",
+      "sellerEmail": "seller10@example.com",
+      "subCategory": "Role-Play",
+      "toyPrice": 19.99,
+      "rating": 4.1,
+      "availableQuantity": 14,
+      "detailDescription": "Let your child play doctor with this fun and educational playset. It includes various medical instruments and promotes imaginative play."
+    },
+    {
+      "toyImage": "https://i.ibb.co/89fvnp2/n0jn-lo29-210929.jpg",
+      "toyName": "Stuffed Elephant",
+      "sellerName": "Seller 11",
+      "sellerEmail": "seller11@example.com",
+      "subCategory": "Stuffed Animals",
+      "toyPrice": 16.99,
+      "rating": 4.4,
+      "availableQuantity": 18,
+      "detailDescription": "This plush elephant is soft and huggable. It provides comfort and companionship for children, making it an ideal bedtime buddy."
+    },
+    {
+      "toyImage": "https://i.ibb.co/9n3jq2g/dinosaur-with-spikes-back.jpg",
+      "toyName": "Wooden Train Set",
+      "sellerName": "Seller 12",
+      "sellerEmail": "seller12@example.com",
+      "subCategory": "Trains",
+      "toyPrice": 39.99,
+      "rating": 4.6,
+      "availableQuantity": 5,
+      "detailDescription": "All aboard! This wooden train set features tracks, train cars, and accessories for endless railway adventures."
+    },
+    {
+      "toyImage": "https://i.ibb.co/wNh5KGL/front-view-cute-little-baby-boy-cupcake-teddybear.jpg",
+      "toyName": "Dollhouse",
+      "sellerName": "Seller 13",
+      "sellerEmail": "seller13@example.com",
+      "subCategory": "Dollhouses",
+      "toyPrice": 59.99,
+      "rating": 4.9,
+      "availableQuantity": 2,
+      "detailDescription": "Spark your child's imagination with this beautifully crafted dollhouse. It has multiple rooms and comes with furniture and accessories."
+    },
+    {
+      "toyImage": "https://i.ibb.co/89fvnp2/n0jn-lo29-210929.jpg",
+      "toyName": "Basketball Hoop",
+      "sellerName": "Seller 14",
+      "sellerEmail": "seller14@example.com",
+      "subCategory": "Sports",
+      "toyPrice": 29.99,
+      "rating": 4.3,
+      "availableQuantity": 11,
+      "detailDescription": "Play like a pro with this basketball hoop. It's adjustable, making it suitable for children of different ages and skill levels."
+    },
+    {
+      "toyImage": "https://i.ibb.co/9n3jq2g/dinosaur-with-spikes-back.jpg",
+      "toyName": "Construction Vehicle Set",
+      "sellerName": "Seller 15",
+      "sellerEmail": "seller15@example.com",
+      "subCategory": "Vehicles",
+      "toyPrice": 24.99,
+      "rating": 4.5,
+      "availableQuantity": 10,
+      "detailDescription": "Dig, scoop, and transport with this construction vehicle set. It includes different vehicles for a realistic construction experience."
+    },
+    {
+      "toyImage": "https://i.ibb.co/wNh5KGL/front-view-cute-little-baby-boy-cupcake-teddybear.jpg",
+      "toyName": "Magic Kit",
+      "sellerName": "Seller 16",
+      "sellerEmail": "seller16@example.com",
+      "subCategory": "Magic",
+      "toyPrice": 17.99,
+      "rating": 4.2,
+      "availableQuantity": 16,
+      "detailDescription": "Abracadabra! This magic kit includes tricks and props to amaze and entertain. Perfect for aspiring magicians."
+    },
+    {
+      "toyImage": "https://i.ibb.co/89fvnp2/n0jn-lo29-210929.jpg",
+      "toyName": "Tea Party Set",
+      "sellerName": "Seller 17",
+      "sellerEmail": "seller17@example.com",
+      "subCategory": "Pretend Play",
+      "toyPrice": 14.99,
+      "rating": 4.6,
+      "availableQuantity": 9,
+      "detailDescription": "Host an elegant tea party with this delightful tea set. It comes with teacups, saucers, a teapot, and other accessories."
+    },
+    {
+      "toyImage": "https://i.ibb.co/wNh5KGL/front-view-cute-little-baby-boy-cupcake-teddybear.jpg",
+      "toyName": "Building Brick Set",
+      "sellerName": "Seller 18",
+      "sellerEmail": "seller18@example.com",
+      "subCategory": "Building Blocks",
+      "toyPrice": 19.99,
+      "rating": 4.3,
+      "availableQuantity": 12,
+      "detailDescription": "Build, create, and imagine with this building brick set. It offers endless possibilities and encourages hands-on creativity."
+    },
+    {
+      "toyImage": "https://i.ibb.co/9n3jq2g/dinosaur-with-spikes-back.jpg",
+      "toyName": "Play Kitchen",
+      "sellerName": "Seller 19",
+      "sellerEmail": "seller19@example.com",
+      "subCategory": "Playsets",
+      "toyPrice": 69.99,
+      "rating": 4.8,
+      "availableQuantity": 3,
+      "detailDescription": "Cook up imaginative play with this play kitchen. It features a stove, oven, sink, and other realistic details."
+    },
+    {
+      "toyImage": "https://i.ibb.co/89fvnp2/n0jn-lo29-210929.jpg",
+      "toyName": "Remote Control Helicopter",
+      "sellerName": "Seller 20",
+      "sellerEmail": "seller20@example.com",
+      "subCategory": "Helicopters",
+      "toyPrice": 44.99,
+      "rating": 4.4,
+      "availableQuantity": 7,
+      "detailDescription": "Take to the skies with this remote control helicopter. It offers smooth flight controls and a durable design."
+    },
+    {
+      "toyImage": "https://i.ibb.co/wNh5KGL/front-view-cute-little-baby-boy-cupcake-teddybear.jpg",
+      "toyName": "Coloring Book Set",
+      "sellerName": "Seller 21",
+      "sellerEmail": "seller21@example.com",
+      "subCategory": "Art Supplies",
+      "toyPrice": 9.99,
+      "rating": 4.0,
+      "availableQuantity": 15,
+      "detailDescription": "Unleash your child's creativity with this set of coloring books. It features a variety of themes to inspire artistic expression."
+    },
+    {
+      "toyImage": "https://i.ibb.co/89fvnp2/n0jn-lo29-210929.jpg",
+      "toyName": "Stomp Rocket",
+      "sellerName": "Seller 22",
+      "sellerEmail": "seller22@example.com",
+      "subCategory": "Outdoor Toys",
+      "toyPrice": 24.99,
+      "rating": 4.7,
+      "availableQuantity": 5,
+      "detailDescription": "Launch rockets into the sky with this stomp rocket set. It provides fun and excitement for outdoor play."
+    },
+    {
+      "toyImage": "https://i.ibb.co/89fvnp2/n0jn-lo29-210929.jpg",
+      "toyName": "Dress-Up Costume Set",
+      "sellerName": "Seller 23",
+      "sellerEmail": "seller23@example.com",
+      "subCategory": "Dress-Up",
+      "toyPrice": 19.99,
+      "rating": 4.5,
+      "availableQuantity": 8,
+      "detailDescription": "Transform into different characters with this dress-up costume set. It includes various costumes and accessories for imaginative play."
+    },
+    {
+      "toyImage": "https://i.ibb.co/89fvnp2/n0jn-lo29-210929.jpg",
+      "toyName": "Pirate Ship Playset",
+      "sellerName": "Seller 24",
+      "sellerEmail": "seller24@example.com",
+      "subCategory": "Pretend Play",
+      "toyPrice": 32.99,
+      "rating": 4.6,
+      "availableQuantity": 4,
+      "detailDescription": "Embark on swashbuckling adventures with this pirate ship playset. It features a ship, pirate figures, and accessories for imaginative play."
+    },
+    {
+      "toyImage": "https://i.ibb.co/9n3jq2g/dinosaur-with-spikes-back.jpg",
+      "toyName": "Science Experiment Kit",
+      "sellerName": "Seller 25",
+      "sellerEmail": "seller25@example.com",
+      "subCategory": "Science",
+      "toyPrice": 27.99,
+      "rating": 4.3,
+      "availableQuantity": 6,
+      "detailDescription": "Discover the wonders of science with this experiment kit. It includes materials and instructions for hands-on learning and exploration."
+    }
+  ]
+  
