@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import CategoryCard from './CategoryCard';
 const ToyCategory = ({toysData}) => {
+    console.log(toysData)
 
     const [toys,setToys]=useState([])
 
@@ -29,8 +30,12 @@ const ToyCategory = ({toysData}) => {
         }
     }
     return (
-        <div className=" bg-slate-200 px-4 py-8 rounded-xl">
-          <h1 className="text-4xl font-bold mb-6">Toys Category</h1>
+        <div className=" bg-slate-200 px-4 py-10 rounded-xl">
+          <div className='flex items-center pb-8'>
+            <h1 className=' text-4xl font-semibold '> <span className='font-bold text-5xl text-pink-500'>T</span>oys <span className='font-bold text-5xl text-pink-500'>C</span>ategory </h1>
+            <p className='font-bold text-4xl text-pink-500'>________</p>
+            </div>
+
           <Tabs>
             <TabList className="flex mb-4">
               <Tab onClick={handleTeddy} className="mr-4 px-4 py-2 rounded-lg bg-pink-500 text-white font-semibold cursor-pointer">
@@ -46,9 +51,9 @@ const ToyCategory = ({toysData}) => {
     
             <TabPanel>
               <h2 className="text-lg font-semibold mb-2">Teddy Bear</h2>
-              <div className=' grid grid-cols-2 gap-5'>
+              <div className='grid grid-cols-2 gap-5'>
                 {
-                    toys.map(toy=><CategoryCard key={toy._id} toy={toy}></CategoryCard>)
+                   toys.map(toy=><CategoryCard key={toy._id} toy={toy}></CategoryCard>)
                 }
               </div>
             </TabPanel>

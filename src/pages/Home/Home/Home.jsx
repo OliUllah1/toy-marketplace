@@ -3,6 +3,7 @@ import Banner from '../Banner/Banner';
 import Gallery from '../Gallery/Gallery';
 import ToyCategory from '../ToyCategory/ToyCategory';
 import { AuthContext } from '../../../Provider/AuthProvider';
+import ToyShop from '../ToyShop/ToyShop';
 
 const Home = () => {
 
@@ -15,10 +16,11 @@ const Home = () => {
     },[])
     console.log(toysData)
     return (
-        <div className='pb-10'>
+        <div className=''>
             <Banner></Banner>
             <Gallery></Gallery>
             <ToyCategory toysData={toysData}></ToyCategory>
+            <ToyShop toysData={toysData}></ToyShop>
         </div>
     );
 };

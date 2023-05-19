@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 const CategoryCard = ({toy}) => {
     const {_id,rating,toyImage,toyName,toyPrice,}=toy;
     return (
-        <div className='border-2 border-pink-600 p-5 lg:flex gap-5 rounded-xl items-center'>
+        <div className='border-2 shadow-2xl border-pink-600 p-5 lg:flex gap-5 rounded-xl items-center'>
             <div className='w-[50%] h-full'>
                 <img className='w-full h-full rounded-lg object-center' src={toyImage} alt="" />
             </div>
