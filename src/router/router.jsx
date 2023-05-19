@@ -8,6 +8,7 @@ import Login from "../pages/Home/Login/Login";
 import Register from "../pages/Home/Register/Register";
 import PrivateRouter from "./PrivateRouter/PrivateRouter";
 import ToyShop from "../pages/Home/ToyShop/ToyShop";
+import ToyDetails from "../pages/Home/ToyDetails/ToyDetails";
 
 
 const router = createBrowserRouter([
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
         {
             path:'alltoys',
             element:<ToyShop></ToyShop>
+        },
+        {
+            path:'alltoys/:id',
+            element:<ToyDetails></ToyDetails>,
+            loader:({params})=>fetch(`https://toy-marketplace-server-flax.vercel.app/toys/${params.id}`)
         },
         {
             path:'mytoys',

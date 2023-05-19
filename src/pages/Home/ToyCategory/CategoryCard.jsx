@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaStar } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const CategoryCard = ({toy}) => {
     const {_id,rating,toyImage,toyName,toyPrice,}=toy;
@@ -12,7 +13,7 @@ const CategoryCard = ({toy}) => {
                 <h4 className='text-2xl font-semibold'>Toy Name: {toyName}</h4>
                 <h5 className='text-xl font-semibold'>Price : {toyPrice} $</h5>
                 <p className='flex items-center gap-2 text-xl font-semibold'>Rating : {rating} <FaStar className=' text-yellow-300'></FaStar></p>
-                <button className='btn btn-outline btn-secondary'>View Details</button>
+                <Link to={`alltoys/${_id}`}><button className='btn btn-outline btn-secondary'>View Details</button></Link>
             </div>
         </div>
     );

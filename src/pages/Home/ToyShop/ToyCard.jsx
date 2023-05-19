@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaStar } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 const ToyCard = ({toy}) => {
-    console.log(toy)
     const{_id,availableQuantity,rating,sellerName,subCategory,toyImage,toyPrice,toyName}=toy;
     return (
         <div className="card full bg-base-100 shadow-xl">
@@ -15,7 +15,7 @@ const ToyCard = ({toy}) => {
     </div>
     <div className='flex justify-between pb-5'>
     <p className='flex items-center gap-2 text-xl font-semibold'>Rating : {rating} <FaStar className=' text-yellow-300'></FaStar></p>
-        <button className='btn btn-outline btn-secondary'>View Details</button>
+        <Link to={`alltoys/${_id}`}><button className='btn btn-outline btn-secondary'>View Details</button></Link>
     </div>
   </div>
 </div>

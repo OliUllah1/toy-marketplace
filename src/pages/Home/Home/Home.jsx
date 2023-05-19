@@ -14,7 +14,6 @@ const Home = () => {
         .then(res=>res.json())
         .then(data=>setToysData(data))
     },[])
-    console.log(toysData)
     return (
         <div className=''>
             <Banner></Banner>
