@@ -1,12 +1,17 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import { AuthContext } from '../../../Provider/AuthProvider';
 import GoogleAndGithubLogin from './GoogleAndGithubLogin';
 
 const Login = () => {
   const [error,setError]=useState('');
-  const {signIn}=useContext(AuthContext)
+  const {signIn}=useContext(AuthContext);
+  const location =useLocation();
+  const from = location.state?.from?.pathname||'/';
+  const navigate = useNavigate();
+
+  
   const handleLogin =(event)=>{
     event.preventDefault();
     const form = event.target;
@@ -22,6 +27,7 @@ const Login = () => {
       const user = result.user;
       console.log(user)
       form.reset();
+      navigate(from, {replace:true})
     })
     .catch(error=>{
       console.log(error)

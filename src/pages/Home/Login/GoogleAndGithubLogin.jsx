@@ -1,14 +1,19 @@
 import React, { useContext } from 'react';
 import { FaGoogle,FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../../Provider/AuthProvider';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const GoogleAndGithubLogin = () => {
-    const {googleSignIn,githubSignIn}=useContext(AuthContext)
+    const {googleSignIn,githubSignIn}=useContext(AuthContext);
+    const location =useLocation();
+  const from = location.state?.from?.pathname||'/';
+  const navigate = useNavigate();
     const handleGoogleSignIn =()=>{
         googleSignIn()
         .then(result=>{
             const user = result.user;
             console.log(user)
+            navigate(from, {replace:true})
         })
         .catch(error=>{
             console.log(error)
@@ -19,6 +24,7 @@ const GoogleAndGithubLogin = () => {
         .then(result=>{
             const user = result.user;
             console.log(user)
+            navigate(from, {replace:true})
         })
         .catch(error=>{
             console.log(error)
