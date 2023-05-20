@@ -37,6 +37,7 @@ const AddToy = () => {
                     showConfirmButton: false,
                     timer: 1500
                   })
+                  form.reset()
             }
         })
     }
