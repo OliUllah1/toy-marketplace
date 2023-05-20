@@ -2,7 +2,7 @@ import React from 'react';
 import { FaStar } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 const ToyCard = ({toy,index}) => {
-    const{_id,availableQuantity,rating,sellerName,subCategory,toyImage,toyPrice,toyName}=toy;
+    const{_id,availableQuantity,sellerName,subCategory,toyPrice,toyName}=toy;
     return (
     
             <tr>
