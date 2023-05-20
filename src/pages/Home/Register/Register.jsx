@@ -1,12 +1,16 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FaFacebookF,FaGithub } from "react-icons/fa";
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import GoogleAndGithubLogin from '../Login/GoogleAndGithubLogin';
+import useTitle from '../../../Hooks/useTitle';
+
+
 const Register = () => {
   const [error,setError]=useState('');
   const {createUser}=useContext(AuthContext);
+  const navigate = useNavigate()
+  useTitle('Register')
   const updateUserNameAndProfileImages =(user,name,photo)=>{
     updateProfile(user,{displayName:name,photoURL:photo})
     .then(result=>{
@@ -24,6 +28,8 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
     const photoUrl = form.photoUrl.value;
+    
+
     setError('')
     if(password.length<6){
       setError('provide the 6 character password and try again')
@@ -36,6 +42,7 @@ const Register = () => {
       console.log(user)
       form.reset();
       updateUserNameAndProfileImages(result.user,name,password)
+      navigate('/')
       
     })
     .catch(error=>{

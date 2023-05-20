@@ -1,17 +1,17 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-
 import { AuthContext } from '../../../Provider/AuthProvider';
 import GoogleAndGithubLogin from './GoogleAndGithubLogin';
+import useTitle from '../../../Hooks/useTitle';
 
 const Login = () => {
   const [error,setError]=useState('');
   const {signIn}=useContext(AuthContext);
+  useTitle('Login')
   const location =useLocation();
   const from = location.state?.from?.pathname||'/';
   const navigate = useNavigate();
 
-  
   const handleLogin =(event)=>{
     event.preventDefault();
     const form = event.target;

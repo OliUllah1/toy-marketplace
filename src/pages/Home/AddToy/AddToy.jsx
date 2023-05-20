@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import useTitle from '../../../Hooks/useTitle';
 
 const AddToy = () => {
-    const {user}= useContext(AuthContext)
-
+    const {user}= useContext(AuthContext);
+    useTitle('Add Toy')
     const handleAddToy =(event)=>{
         event.preventDefault()
         const form =event.target;
@@ -13,13 +14,13 @@ const AddToy = () => {
         const sellerName = form.sellerName.value;
         const sellerEmail= form.sellerEmail.value;
         const subCategory= form.subCategory.value;
-        const toyPrice = form.price.value;
+        const toyPrice = parseFloat(form.price.value);
         const rating = form.rating.value;
         const availableQuantity =form.quantity.value;
         const detailDescription = form.description.value;
         const toyInfo ={toyImage,toyName,sellerName,sellerEmail,subCategory,toyPrice,rating,availableQuantity,detailDescription}
         console.log(toyInfo)
-        fetch('http://localhost:5000/toys',{
+        fetch('https://toy-marketplace-server-flax.vercel.app/toys',{
             method:'POST',
             headers:{
                 'Content-type':'application/json'
@@ -69,7 +70,7 @@ const AddToy = () => {
                 <label className="label">
                     <span className="label-text">Seller Name</span>
                 </label>
-                <input type="text" name='sellerName' placeholder="seller name" className="input input-bordered input-secondary w-full" required/>
+                <input type="text" defaultValue={user?.displayName} name='sellerName' placeholder="seller name" className="input input-bordered input-secondary w-full" required/>
             </div>
 
             <div className="form-control">

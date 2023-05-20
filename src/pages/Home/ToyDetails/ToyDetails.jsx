@@ -2,10 +2,11 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FaStar } from "react-icons/fa";
 import Swal from 'sweetalert2';
+import useTitle from '../../../Hooks/useTitle';
 
 const ToyDetails = () => {
     const toyData = useLoaderData()
-    console.log(toyData)
+    useTitle('Toy Details')
     const{availableQuantity,rating,sellerName,toyImage,toyPrice,toyName,detailDescription,sellerEmail} = toyData;
     const handleOrder =()=>{
          Swal.fire({

@@ -4,11 +4,13 @@ import Gallery from '../Gallery/Gallery';
 import ToyCategory from '../ToyCategory/ToyCategory';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import ToyShop from '../ToyShop/ToyShop';
+import useTitle from '../../../Hooks/useTitle';
 
 const Home = () => {
 
     const {loading}=useContext(AuthContext)
     const [toysData,setToysData]=useState([]);
+    useTitle('Home')
     useEffect(()=>{
         fetch('https://toy-marketplace-server-flax.vercel.app/toys')
         .then(res=>res.json())
@@ -19,7 +21,6 @@ const Home = () => {
             <Banner></Banner>
             <Gallery></Gallery>
             <ToyCategory toysData={toysData}></ToyCategory>
-            <ToyShop toysData={toysData}></ToyShop>
         </div>
     );
 };

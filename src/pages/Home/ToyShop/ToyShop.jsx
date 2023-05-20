@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import ToyCard from './ToyCard';
 import { AuthContext } from '../../../Provider/AuthProvider';
+import useTitle from '../../../Hooks/useTitle';
 
 const ToyShop = () => {
     const [toysData,setToysData]=useState([]);
     const {loading}=useContext(AuthContext)
+    useTitle('All Toys')
     useEffect(()=>{
         fetch('https://toy-marketplace-server-flax.vercel.app/toys')
         .then(res=>res.json())

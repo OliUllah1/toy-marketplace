@@ -5,8 +5,8 @@ import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Navber = () => {
     const {user,logOut}=useContext(AuthContext)
-    const userImages = user?.photoURL
-    const userName =user?.displayName
+    const userImages = user?.photoURL ||''
+    const userName =user?.displayName || ''
     const handleLogOut=()=>{
         logOut()
         .then(()=>{})
@@ -15,7 +15,7 @@ const Navber = () => {
         })
     }
     return (
-        <div className="flex justify-between items-center bg-white shadow-md mb-5">
+        <div className="flex justify-between items-center bg-white shadow-md mb-2">
     <div className="navbar">
       <div className=" flex-1">
         <div className="dropdown">

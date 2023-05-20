@@ -1,9 +1,11 @@
 import React from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useTitle from '../../../Hooks/useTitle';
 
 const UpdatedToyInfo = () => {
-    const toyData = useLoaderData()
+    const toyData = useLoaderData();
+    useTitle('Toy Update')
     const  {_id,toyImage,toyName,sellerName,sellerEmail,subCategory,toyPrice,rating,availableQuantity,detailDescription} = toyData;
     const navigate = useNavigate();
 
@@ -15,13 +17,13 @@ const UpdatedToyInfo = () => {
         const sellerName = form.sellerName.value;
         const sellerEmail= form.sellerEmail.value;
         const subCategory= form.subCategory.value;
-        const toyPrice = form.price.value;
+        const toyPrice = parseFloat(form.price.value);
         const rating = form.rating.value;
         const availableQuantity =form.quantity.value;
         const detailDescription = form.description.value;
         const toyInfo ={toyImage,toyName,sellerName,sellerEmail,subCategory,toyPrice,rating,availableQuantity,detailDescription}
         console.log(toyInfo)
-        fetch(`http://localhost:5000/mytoys/${_id}`,{
+        fetch(`https://toy-marketplace-server-flax.vercel.app/mytoys/${_id}`,{
             method:'PUT',
             headers:{
                 'Content-type':'application/json'

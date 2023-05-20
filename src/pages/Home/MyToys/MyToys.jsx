@@ -2,11 +2,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import MyToyCard from './MyToyCard';
 import Swal from 'sweetalert2';
+import useTitle from '../../../Hooks/useTitle';
 
 const MyToys = () => {
     const [toys,setToys]=useState([])
-    const {user}=useContext(AuthContext)
-    const url =`http://localhost:5000/mytoys?email=${user.email}`;
+    const {user}=useContext(AuthContext);
+    useTitle('My Toys')
+    const url =`https://toy-marketplace-server-flax.vercel.app/mytoys?email=${user.email}`;
     useEffect(()=>{
         fetch(url,{
             method:'GET'
@@ -28,7 +30,7 @@ const MyToys = () => {
           confirmButtonText: "Yes, delete now",
         }).then((result) => {
           if (result.isConfirmed) {
-            fetch(`http://localhost:5000/mytoys/${id}`, {
+            fetch(`https://toy-marketplace-server-flax.vercel.app/mytoys/${id}`, {
               method: "DELETE"
             })
               .then((res) => res.json())

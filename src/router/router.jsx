@@ -43,7 +43,7 @@ const router = createBrowserRouter([
         {
             path:'/updatedtoy/:id',
             element:<UpdatedToyInfo></UpdatedToyInfo>,
-            loader:({params})=>fetch(`http://localhost:5000/mytoys/${params.id}`)
+            loader:({params})=>fetch(`https://toy-marketplace-server-flax.vercel.app/mytoys/${params.id}`)
         },
         {
             path:'/blog',
