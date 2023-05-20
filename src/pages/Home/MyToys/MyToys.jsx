@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import MyToyCard from './MyToyCard';
+import Swal from 'sweetalert2';
 
 const MyToys = () => {
     const [toys,setToys]=useState([])
@@ -15,7 +16,39 @@ const MyToys = () => {
             setToys(data)
         })
     },[url])
-    console.log(toys)
+
+
+
+    const handleDelete = (id) => {
+        Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, delete now",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            fetch(`http://localhost:5000/mytoys/${id}`, {
+              method: "DELETE"
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                Swal.fire("Deleted!", 
+                "toys has been deleted.",
+                 "success");
+                console.log(data);
+                const remaining = toys.filter((toy) => toy._id !== id);
+                setToys(remaining)
+              });
+          }
+        });
+      };
+
+
+
+
     return (
         <div className='pb-10'>
             <div className='flex items-center pb-8'>
@@ -45,7 +78,7 @@ const MyToys = () => {
     </thead>
     <tbody>
       {
-        toys.map((toy,index)=><MyToyCard key={toy._id} index={index} toy={toy}></MyToyCard>)
+        toys.map((toy,index)=><MyToyCard handleDelete={handleDelete}  key={toy._id} index={index} toy={toy}></MyToyCard>)
       }
     </tbody>
     

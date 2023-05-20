@@ -1,8 +1,10 @@
 import React from 'react';
 import { FaPen,FaTrashAlt } from "react-icons/fa";
+import Swal from 'sweetalert2';
 
-const MyToyCard = ({toy,index}) => {
-    const{_id,availableQuantity,rating,sellerName,sellerEmail,subCategory,toyImage,toyPrice,toyName}=toy
+const MyToyCard = ({toy,index,handleDelete}) => {
+    const{_id,availableQuantity,rating,sellerName,sellerEmail,subCategory,toyImage,toyPrice,toyName}=toy;
+    
     return (
         <tr>
         <th>
@@ -30,8 +32,8 @@ const MyToyCard = ({toy,index}) => {
         <td>{availableQuantity}</td>
         <td>{rating}</td>
         <th className=' space-x-3'>
-          <button className="btn btn-circle btn-outline btn-info"><FaPen className='w-5 h-5'></FaPen></button>
-          <button className="btn btn-circle btn-outline text-red-500 hover:text-white"><FaTrashAlt className='w-5 h-5'></FaTrashAlt></button>
+          <button onClick={()=>handleUpdate(_id)} className="btn btn-circle btn-outline btn-info"><FaPen className='w-5 h-5'></FaPen></button>
+          <button onClick={()=>handleDelete(_id)} className="btn btn-circle btn-outline text-red-500 hover:text-white"><FaTrashAlt className='w-5 h-5'></FaTrashAlt></button>
         </th>
       </tr>
     );
