@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaPen,FaTrashAlt } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const MyToyCard = ({toy,index,handleDelete}) => {
@@ -32,7 +33,7 @@ const MyToyCard = ({toy,index,handleDelete}) => {
         <td>{availableQuantity}</td>
         <td>{rating}</td>
         <th className=' space-x-3'>
-          <button onClick={()=>handleUpdate(_id)} className="btn btn-circle btn-outline btn-info"><FaPen className='w-5 h-5'></FaPen></button>
+          <Link to={`/updatedtoy/${_id}`}><button className="btn btn-circle btn-outline btn-info"><FaPen className='w-5 h-5'></FaPen></button></Link>
           <button onClick={()=>handleDelete(_id)} className="btn btn-circle btn-outline text-red-500 hover:text-white"><FaTrashAlt className='w-5 h-5'></FaTrashAlt></button>
         </th>
       </tr>
