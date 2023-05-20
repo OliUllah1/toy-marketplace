@@ -1,9 +1,10 @@
-import React from 'react';
+
 import banner from '../../../assets/images/banner.jpg';
-import banner2 from '../../../assets/images/banner2.avif'
 import { FaArrowRight } from "react-icons/fa";
 
+
 const Banner = () => {
+    
     return (
         <div className="carousel w-full h-[550px] rounded-xl">
             <div id="slide1" className="carousel-item relative w-full">
