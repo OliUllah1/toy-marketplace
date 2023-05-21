@@ -1,12 +1,11 @@
-import React, { useContext } from 'react';
+
 import Banner from '../Banner/Banner';
 import Gallery from '../Gallery/Gallery';
 import ToyCategory from '../ToyCategory/ToyCategory';
-import { AuthContext } from '../../../Provider/AuthProvider';
 import useTitle from '../../../Hooks/useTitle';
+import TrendingProducts from '../TrendingProducts/TrendingProducts';
 
 const Home = () => {
-    const {loading}=useContext(AuthContext)
     useTitle('Home')
     
     return (
@@ -14,6 +13,7 @@ const Home = () => {
             <Banner></Banner>
             <Gallery></Gallery>
             <ToyCategory></ToyCategory>
+            <TrendingProducts></TrendingProducts>
         </div>
     );
 };

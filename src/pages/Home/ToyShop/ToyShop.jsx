@@ -28,9 +28,6 @@ const ToyShop = () => {
       .then(data=>setToysData(data))
     }
 
-
-
-
     useEffect(()=>{
         fetch(`http://localhost:5000/toys?sorting=${activeSorting}`)
         .then(res=>res.json())
