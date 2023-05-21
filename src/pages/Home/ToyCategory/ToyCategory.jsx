@@ -2,29 +2,53 @@ import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import CategoryCard from './CategoryCard';
-const ToyCategory = ({toysData}) => {
+const ToyCategory = () => {
     const [toys,setToys]=useState([])
+    const [toysData,setToysData]=useState([]);
+    const [teddyData,setTeddyData]=useState([])
 
-    const handleTeddy=()=>{
-        const teddyBearData = toysData.filter(toy=>toy.subCategory === 'Teddy Bear')
+    useEffect(()=>{
+      fetch('https://toy-marketplace-server-flax.vercel.app/toys')
+      .then(res=>res.json())
+      .then(data=>setToysData(data))
+  },[])
+
+    useEffect(()=>{
+      const teddyBearData = toysData.filter(toy=>toy.subCategory === 'Teddy Bear')
         if(teddyBearData.length>2){
             const teddy=teddyBearData.slice(0,2)
             console.log(teddy)
-            setToys(teddy)
+            setTeddyData(teddy)
+            return
         }
-    }
+        else{
+          setTeddyData(teddyBearData)
+        }
+    },[toysData])
+    
     const handleHorse=()=>{
+      setToys([])
         const horseData = toysData.filter(toy=>toy.subCategory === 'Horse')
         if(horseData.length>2){
             const horse=horseData.slice(0,2)
             setToys(horse)
+            return
+        }
+        else{
+          setToys(horseData)
         }
     }
     const handleDinosaur=()=>{
+      setToys([])
         const dinosaurData = toysData.filter(toy=>toy.subCategory === 'Dinosaur')
         if(dinosaurData.length>2){
             const dinosaur=dinosaurData.slice(0,2)
+            console.log(dinosaur)
             setToys(dinosaur)
+            return
+        }
+        else{
+          setToys(dinosaurData)
         }
     }
     return (
@@ -36,7 +60,7 @@ const ToyCategory = ({toysData}) => {
 
           <Tabs>
             <TabList className="flex mb-4">
-              <Tab onClick={handleTeddy} className="mr-4 px-4 py-2 rounded-lg bg-pink-500 text-white font-semibold cursor-pointer">
+              <Tab  className="mr-4 px-4 py-2 rounded-lg bg-pink-500 text-white font-semibold cursor-pointer">
               Teddy Bear
               </Tab>
               <Tab onClick={handleHorse} className="mr-4 px-4 py-2 rounded-lg bg-pink-500 text-white font-semibold cursor-pointer">
@@ -51,7 +75,7 @@ const ToyCategory = ({toysData}) => {
               <h2 className="text-lg font-semibold mb-2">Teddy Bear</h2>
               <div className='grid grid-cols-2 gap-5'>
                 {
-                   toys.map(toy=><CategoryCard key={toy._id} toy={toy}></CategoryCard>)
+                   teddyData.map(toy=><CategoryCard key={toy._id} toy={toy}></CategoryCard>)
                 }
               </div>
             </TabPanel>
