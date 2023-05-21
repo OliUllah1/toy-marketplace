@@ -4,6 +4,7 @@ import Gallery from '../Gallery/Gallery';
 import ToyCategory from '../ToyCategory/ToyCategory';
 import useTitle from '../../../Hooks/useTitle';
 import TrendingProducts from '../TrendingProducts/TrendingProducts';
+import ContactsUs from '../ContactsUs/ContactsUs';
 
 const Home = () => {
     useTitle('Home')
@@ -14,6 +15,7 @@ const Home = () => {
             <Gallery></Gallery>
             <ToyCategory></ToyCategory>
             <TrendingProducts></TrendingProducts>
+            <ContactsUs></ContactsUs>
         </div>
     );
 };
