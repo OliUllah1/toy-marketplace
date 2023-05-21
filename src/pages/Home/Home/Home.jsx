@@ -16,8 +16,8 @@ const Home = () => {
             <Gallery></Gallery>
             <ToyCategory></ToyCategory>
             <TrendingProducts></TrendingProducts>
-            <ContactsUs></ContactsUs>
             <OfferProduct></OfferProduct>
+            <ContactsUs></ContactsUs>
         </div>
     );
 };

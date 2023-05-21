@@ -4,9 +4,9 @@ import logo from '../../../assets/images/toy-logo.png'
 import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Navber = () => {
-    const {user,logOut,userProfile}=useContext(AuthContext)
+    const {user,logOut,userProfile,userName}=useContext(AuthContext)
     const userImages = user?.photoURL || userProfile;
-    const userName =user?.displayName || '';
+    const profileName =user?.displayName || userName;
     console.log(userImages)
     const handleLogOut=()=>{
         logOut()
@@ -44,7 +44,7 @@ const Navber = () => {
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  isActive ? "text-blue-400 font-semibold" : ""
+                  isActive ? "text-pink-500 font-semibold" : ""
                 }
               >
                 Home
@@ -54,7 +54,7 @@ const Navber = () => {
               <NavLink
                 to="/alltoys"
                 className={({ isActive }) =>
-                  isActive ? "text-blue-400 font-semibold" : ""
+                  isActive ? "text-pink-500 font-semibold" : ""
                 }
               >
                 All Toys
@@ -64,7 +64,7 @@ const Navber = () => {
               <NavLink
                 to="/mytoys"
                 className={({ isActive }) =>
-                  isActive ? "text-blue-400 font-semibold" : ""
+                  isActive ? "text-pink-500 font-semibold" : ""
                 }
               >
                 My Toys
@@ -74,7 +74,7 @@ const Navber = () => {
               <NavLink
                 to="/addtoy"
                 className={({ isActive }) =>
-                  isActive ? "text-blue-400 font-semibold" : ""
+                  isActive ? "text-pink-500 font-semibold" : ""
                 }
               >
                Add Toy
@@ -84,7 +84,7 @@ const Navber = () => {
               <NavLink
                 to="/blog"
                 className={({ isActive }) =>
-                  isActive ? "text-blue-400 font-semibold" : ""
+                  isActive ? "text-pink-500 font-semibold" : ""
                 }
               >
                Blog
@@ -148,7 +148,7 @@ const Navber = () => {
             user?<div className="flex items-center gap-2">
             <div  className="btn btn-ghost btn-circle avatar">
               <div className="w-20 rounded-full">
-                <img className="w-full object-center" title={userName} src={userImages} />
+                <img className="w-full object-center" title={profileName} src={userImages} />
               </div>
             </div>
   

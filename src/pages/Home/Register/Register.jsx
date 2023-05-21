@@ -8,7 +8,7 @@ import useTitle from '../../../Hooks/useTitle';
 
 const Register = () => {
   const [error,setError]=useState('');
-  const {createUser,setUserProfile}=useContext(AuthContext);
+  const {createUser,setUserProfile,setUserName}=useContext(AuthContext);
   const navigate = useNavigate()
   useTitle('Register')
   const updateUserNameAndProfileImages =(user,name,photo)=>{
@@ -24,12 +24,14 @@ const Register = () => {
   const handleRegister =(event)=>{
     event.preventDefault()
     setUserProfile('')
+    setUserName('')
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
     const photoUrl = form.photoUrl.value;
     setUserProfile(photoUrl)
+    setUserName(name)
     
 
     setError('')

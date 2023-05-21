@@ -10,6 +10,7 @@ const AuthProvider = ({children}) => {
     const [loading,setLoading] =useState(true)
     const [defaultUser,setDefaultUser]=useState(null)
     const [userProfile,setUserProfile]=useState(null);
+    const [userName,setUserName] =useState(null);
     
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
@@ -53,7 +54,9 @@ const AuthProvider = ({children}) => {
         defaultUser,
         setDefaultUser,
         userProfile,
-        setUserProfile
+        setUserProfile,
+        userName,
+        setUserName
     }
     return (
         <div>
