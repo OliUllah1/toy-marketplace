@@ -4,9 +4,10 @@ import logo from '../../../assets/images/toy-logo.png'
 import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Navber = () => {
-    const {user,logOut}=useContext(AuthContext)
-    const userImages = user?.photoURL ||''
-    const userName =user?.displayName || ''
+    const {user,logOut,userProfile}=useContext(AuthContext)
+    const userImages = user?.photoURL || userProfile;
+    const userName =user?.displayName || '';
+    console.log(userImages)
     const handleLogOut=()=>{
         logOut()
         .then(()=>{})
@@ -15,7 +16,7 @@ const Navber = () => {
         })
     }
     return (
-        <div className="flex justify-between items-center bg-white shadow-md mb-2">
+        <div className="flex justify-between items-center bg-white shadow-md lg:mb-1">
     <div className="navbar">
       <div className=" flex-1">
         <div className="dropdown">
@@ -102,7 +103,7 @@ const Navber = () => {
           <li>
             <NavLink
               to="/"
-              className={({ isActive }) => (isActive ? "text-blue-500" : " text-gray-800")}
+              className={({ isActive }) => (isActive ? "text-pink-500" : " text-gray-800")}
             >
               Home
             </NavLink>
@@ -110,7 +111,7 @@ const Navber = () => {
           <li>
             <NavLink
               to="/alltoys"
-              className={({ isActive }) => (isActive ? "text-blue-500" : " text-gray-800")}
+              className={({ isActive }) => (isActive ? "text-pink-500" : " text-gray-800")}
             >
               All Toys
             </NavLink>
@@ -118,7 +119,7 @@ const Navber = () => {
           <li>
             <NavLink
               to="/mytoys"
-              className={({ isActive }) => (isActive ? "text-blue-500" : "text-gray-800")}
+              className={({ isActive }) => (isActive ? "text-pink-500" : "text-gray-800")}
             >
               My Toys
             </NavLink>
@@ -126,7 +127,7 @@ const Navber = () => {
           <li>
             <NavLink
               to="/addtoy"
-              className={({ isActive }) => (isActive ? "text-blue-500" : "text-gray-800")}
+              className={({ isActive }) => (isActive ? "text-pink-500" : "text-gray-800")}
             >
               Add Toy
             </NavLink>
@@ -134,7 +135,7 @@ const Navber = () => {
           <li>
             <NavLink
               to="/blog"
-              className={({ isActive }) => (isActive ? "text-blue-500" : "text-gray-800")}
+              className={({ isActive }) => (isActive ? "text-pink-500" : "text-gray-800")}
             >
               Blog
             </NavLink>
@@ -146,45 +147,21 @@ const Navber = () => {
         {
             user?<div className="flex items-center gap-2">
             <div  className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
+              <div className="w-20 rounded-full">
                 <img className="w-full object-center" title={userName} src={userImages} />
               </div>
             </div>
   
             <div>
-            <button onClick={handleLogOut} className="px-8 rounded-lg py-2 btn-outline border btn-info">Log Out</button>
+            <button onClick={handleLogOut} className="px-8 rounded-lg py-2 btn-outline border btn-error">Log Out</button>
             </div>
           </div>:<Link to='/login'><button className="px-8 rounded-lg py-2 btn-outline border btn-info">Log In</button></Link>
         }
-      
-        {/* {
-          user?  <div className="flex items-center gap-2">
-          <div  className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
-              <img
-                className="w-full" title={name}
-                src={profileImg}
-              />
-            </div>
-          </div>
-
-          <div>
-          <button onClick={handleLogOut} className="px-5 py-1 rounded text-white border border-blue-700 hover:bg-blue-400">log out</button>
-          </div>
-        </div>
-          :<Link to='login'><button className="px-5 py-1 rounded text-white border border-blue-700 hover:bg-blue-400">Log In</button></Link>
-         } */}
       </div>
       </div>
     </div>
   </div>
-
-
-
-
     );
 };
 
 export default Navber;
-
-//text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2

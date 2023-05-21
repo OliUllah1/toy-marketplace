@@ -19,19 +19,19 @@ const ContactsUs = () => {
             </div>
 
 
-            <div className='flex gap-5'>
-                <div className='w-[40%]'>
+            <div className='lg:flex gap-5'>
+                <div className='lg:w-[40%]'>
                     <img className='w-full rounded-lg' src={contactsImg} alt="" />
                 </div>
-                <div className=' w-[60%] p-5'>
+                <div className=' lg:w-[60%] lg:p-5'>
                     <h1 className='text-3xl font-bold text-gray-600'>Contact Form</h1>
                     <form className='mt-5'>
-                    <div className='flex gap-3 mb-4'>
-                    <input type="text" placeholder="First Name" className="input border border-gray-300 py-5 w-full h-full" />
+                    <div className='lg:flex gap-3 mb-4'>
+                    <input type="text"  placeholder="First Name" className="input border mb-3 lg:mb-0 border-gray-300 py-5 w-full h-full" />
                     <input type="email" placeholder="Enter Your Email" className="input border border-gray-300 py-5 w-full h-full" />
                     </div>
-                    <div className='flex gap-3 mb-4'>
-                    <input type="text" placeholder="Your Phone Number" className="input border border-gray-300 py-5 w-full h-full" />
+                    <div className='lg:flex gap-3 mb-4'>
+                    <input type="text" placeholder="Your Phone Number" className="input border mb-3 lg:mb-0 border-gray-300 py-5 w-full h-full" />
                     <input type="text" placeholder="Subjects" className="input border border-gray-300 py-5 w-full h-full" />
                     </div>
                     <textarea className="textarea mb-1 border border-gray-300 h-36 w-full" placeholder="Message"></textarea>

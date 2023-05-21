@@ -2,8 +2,10 @@ import React from 'react';
 import errorImg from '../assets/images/404.jpg'
 import { Link, useRouteError } from 'react-router-dom';
 import { FaHome } from "react-icons/fa";
+import useTitle from '../Hooks/useTitle';
 
 const ErrorPage = () => {
+    useTitle('Error')
     const error = useRouteError()
     return (
         <div className='py-10 space-y-4'>

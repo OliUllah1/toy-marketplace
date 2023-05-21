@@ -4,7 +4,8 @@ import Swal from 'sweetalert2';
 import useTitle from '../../../Hooks/useTitle';
 
 const AddToy = () => {
-    const {user}= useContext(AuthContext);
+    const {user,defaultUser,setDefaultUser}= useContext(AuthContext);
+    const email =user?.email || defaultUser
     useTitle('Add Toy')
     const handleAddToy =(event)=>{
         event.preventDefault()
@@ -18,8 +19,8 @@ const AddToy = () => {
         const rating = form.rating.value;
         const availableQuantity =form.quantity.value;
         const detailDescription = form.description.value;
+        setDefaultUser(sellerEmail)
         const toyInfo ={toyImage,toyName,sellerName,sellerEmail,subCategory,toyPrice,rating,availableQuantity,detailDescription}
-        console.log(toyInfo)
         fetch('https://toy-marketplace-server-flax.vercel.app/toys',{
             method:'POST',
             headers:{
@@ -29,7 +30,6 @@ const AddToy = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data)
             if(data.acknowledged){
                 Swal.fire({
                     position: 'top-center',
@@ -42,7 +42,7 @@ const AddToy = () => {
             }
         })
     }
-
+    
     return (
         <div>
             <div className='flex items-center pb-8'>
@@ -77,15 +77,45 @@ const AddToy = () => {
                 <label className="label">
                     <span className="label-text">Seller Email</span>
                 </label>
-                <input type="email" defaultValue={user.email} name='sellerEmail' placeholder="seller email" className="input input-bordered input-secondary w-full" required/>
+                <input type="email" defaultValue={email} name='sellerEmail' placeholder="seller email" className="input input-bordered input-secondary w-full" required/>
             </div>
+
+            {/* <div className="form-control">
+                <label className="label">
+                    <span className="label-text">Sub Category</span>
+                </label>
+                <input type="text" name='subCategory' placeholder="Sub category" className="input input-bordered input-secondary w-full" required/>
+                
+            </div> */}
 
             <div className="form-control">
                 <label className="label">
                     <span className="label-text">Sub Category</span>
                 </label>
-                <input type="text" name='subCategory' placeholder="Sub category" className="input input-bordered input-secondary w-full" required/>
+            <div  className="">
+                <select name='subCategory' className="input input-bordered input-secondary w-full">
+                    <option disabled selected>Pick category</option>
+                    <option>Teddy Bear</option>
+                    <option>Horse</option>
+                    <option>Dinosaur</option>
+                    <option>Dogs</option>
+                    <option>Cat</option>
+                    <option>Cows</option>
+                </select>
+    
+                </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
 
             <div className="form-control">
                 <label className="label">

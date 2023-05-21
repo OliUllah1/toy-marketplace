@@ -6,9 +6,10 @@ import useTitle from '../../../Hooks/useTitle';
 
 const MyToys = () => {
     const [toys,setToys]=useState([])
-    const {user}=useContext(AuthContext);
+    const {user,defaultUser}=useContext(AuthContext);
+    const email = user?.email || defaultUser;
     useTitle('My Toys')
-    const url =`https://toy-marketplace-server-flax.vercel.app/mytoys?email=${user.email}`;
+    const url =`https://toy-marketplace-server-flax.vercel.app/mytoys?email=${email}`;
     useEffect(()=>{
         fetch(url,{
             method:'GET'

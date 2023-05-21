@@ -4,9 +4,12 @@ import app from '../firebase/firebase.config';
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
+
 const AuthProvider = ({children}) => {
     const [user,setUser]=useState(null)
     const [loading,setLoading] =useState(true)
+    const [defaultUser,setDefaultUser]=useState(null)
+    const [userProfile,setUserProfile]=useState(null);
     
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
@@ -46,7 +49,11 @@ const AuthProvider = ({children}) => {
         user,
         logOut,
         googleSignIn,
-        githubSignIn
+        githubSignIn,
+        defaultUser,
+        setDefaultUser,
+        userProfile,
+        setUserProfile
     }
     return (
         <div>

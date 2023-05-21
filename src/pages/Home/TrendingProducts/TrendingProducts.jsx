@@ -8,12 +8,12 @@ const TrendingProducts = () => {
   return (
     <div className="py-10 bg-slate-100 rounded-lg px-2">
       <div className="flex items-center pb-8">
-        <h1 className=" text-4xl font-semibold ">
+        <h1 className="text-4xl font-semibold ">
           {" "}
-          <span className=" text-5xl text-pink-500">T</span>rending{" "}
-          <span className="text-5xl text-pink-500">P</span>roducts{" "}
+          <span className=" lg:text-5xl text-pink-500">T</span>rending{" "}
+          <span className="lg:text-5xl text-pink-500">P</span>roducts{" "}
         </h1>
-        <p className="font-bold text-4xl text-pink-500">________</p>
+        <p className="font-bold lg:text-4xl text-pink-500">________</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">

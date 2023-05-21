@@ -10,7 +10,6 @@ const ToyShop = () => {
     const [searchValue,setSearchValue] = useState(null)
     const {loading}=useContext(AuthContext)
     useTitle('All Toys')
-    console.log(toysData)
     const handleAscending=(ascending)=>{
       setActiveSorting(true)
     }
@@ -20,16 +19,15 @@ const ToyShop = () => {
     const handleSearchValue =(event)=>{
        setSearchValue(event.target.value)
     }
-    console.log(searchValue)
 
     const handleSearchButton=()=>{
-      fetch(`http://localhost:5000/getToysByName/${searchValue}`)
+      fetch(`https://toy-marketplace-server-flax.vercel.app/getToysByName/${searchValue}`)
       .then(res=>res.json())
       .then(data=>setToysData(data))
     }
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/toys?sorting=${activeSorting}`)
+        fetch(`https://toy-marketplace-server-flax.vercel.app/toys?sorting=${activeSorting}`)
         .then(res=>res.json())
         .then(data=>setToysData(data))
     },[activeSorting])

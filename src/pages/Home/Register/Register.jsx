@@ -8,7 +8,7 @@ import useTitle from '../../../Hooks/useTitle';
 
 const Register = () => {
   const [error,setError]=useState('');
-  const {createUser}=useContext(AuthContext);
+  const {createUser,setUserProfile}=useContext(AuthContext);
   const navigate = useNavigate()
   useTitle('Register')
   const updateUserNameAndProfileImages =(user,name,photo)=>{
@@ -23,11 +23,13 @@ const Register = () => {
 
   const handleRegister =(event)=>{
     event.preventDefault()
+    setUserProfile('')
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
     const photoUrl = form.photoUrl.value;
+    setUserProfile(photoUrl)
     
 
     setError('')
@@ -35,13 +37,12 @@ const Register = () => {
       setError('provide the 6 character password and try again')
       return;
     }
-    console.log(name,email,password,photoUrl)
     createUser(email,password)
     .then(result=>{
       const user = result.user;
       console.log(user)
       form.reset();
-      updateUserNameAndProfileImages(result.user,name,password)
+      updateUserNameAndProfileImages(result.user,name,photoUrl)
       navigate('/')
       
     })

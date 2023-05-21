@@ -17,7 +17,6 @@ const ToyCategory = () => {
       const teddyBearData = toysData.filter(toy=>toy.subCategory === 'Teddy Bear')
         if(teddyBearData.length>2){
             const teddy=teddyBearData.slice(0,2)
-            console.log(teddy)
             setTeddyData(teddy)
             return
         }
@@ -43,7 +42,6 @@ const ToyCategory = () => {
         const dinosaurData = toysData.filter(toy=>toy.subCategory === 'Dinosaur')
         if(dinosaurData.length>2){
             const dinosaur=dinosaurData.slice(0,2)
-            console.log(dinosaur)
             setToys(dinosaur)
             return
         }
@@ -52,10 +50,10 @@ const ToyCategory = () => {
         }
     }
     return (
-        <div className=" bg-slate-200 px-4 py-10 rounded-xl">
+        <div className=" bg-slate-200 px-4 py-10 lg:rounded-xl">
           <div className='flex items-center pb-8'>
-            <h1 className=' text-4xl font-semibold '> <span className=' text-5xl text-pink-500'>T</span>oys <span className='text-5xl text-pink-500'>C</span>ategory </h1>
-            <p className='font-bold text-4xl text-pink-500'>________</p>
+            <h1 className='text-4xl font-semibold '> <span className=' lg:text-5xl text-pink-500'>T</span>oys <span className='lg:text-5xl text-pink-500'>C</span>ategory </h1>
+            <p className='font-bold lg:text-4xl text-pink-500'>________</p>
             </div>
 
           <Tabs>
@@ -73,7 +71,7 @@ const ToyCategory = () => {
     
             <TabPanel>
               <h2 className="text-lg font-semibold mb-2">Teddy Bear</h2>
-              <div className='grid grid-cols-2 gap-5'>
+              <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
                 {
                    teddyData.map(toy=><CategoryCard key={toy._id} toy={toy}></CategoryCard>)
                 }
@@ -81,7 +79,7 @@ const ToyCategory = () => {
             </TabPanel>
             <TabPanel>
             <h2 className="text-lg font-semibold mb-2">Horse Toys</h2>
-              <div className=' grid grid-cols-2 gap-5'>
+              <div className=' grid grid-cols-1 lg:grid-cols-2 gap-5'>
                 {
                     toys.map(toy=><CategoryCard key={toy._id} toy={toy}></CategoryCard>)
                 }
@@ -89,7 +87,7 @@ const ToyCategory = () => {
             </TabPanel>
             <TabPanel>
             <h2 className="text-lg font-semibold mb-2">Dinosaur Toys</h2>
-              <div className=' grid grid-cols-2 gap-5'>
+              <div className=' grid grid-cols-1 lg:grid-cols-2 gap-5'>
                 {
                     toys.map(toy=><CategoryCard key={toy._id} toy={toy}></CategoryCard>)
                 }
