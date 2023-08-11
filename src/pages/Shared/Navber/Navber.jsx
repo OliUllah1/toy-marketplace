@@ -16,7 +16,7 @@ const Navber = () => {
         })
     }
     return (
-        <div className="flex justify-between items-center bg-white shadow-md lg:mb-1">
+        <div className="flex px-10 justify-between items-center bg-white">
     <div className="navbar">
       <div className=" flex-1">
         <div className="dropdown">

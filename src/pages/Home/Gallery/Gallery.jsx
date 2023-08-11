@@ -9,7 +9,7 @@ const Gallery = () => {
     },[])
     return (
 
-        <div className=' bg-gray-300 lg:rounded-lg px-5  pt-10'>
+        <div className=' bg-gray-300 px-5  pt-10'>
             <div className='flex items-center pb-8'  data-aos="fade-down">
             <h1 className=' text-4xl font-semibold '> <span className=' lg:text-5xl text-pink-500'>T</span>oys <span className=' lg:text-5xl text-pink-500'>G</span>allery </h1>
             <p className='font-bold lg:text-4xl text-pink-500'>__________</p>

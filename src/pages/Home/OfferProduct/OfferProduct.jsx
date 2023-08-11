@@ -7,7 +7,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 const OfferProduct = () => {
     return (
-        <div className='py-10 bg-slate-50 rounded-lg'>
+        <div className='py-10 bg-slate-50'>
             <div className='flex items-center pb-8'>
             <h1 className='text-4xl font-semibold '> <span className=' lg:text-5xl text-pink-500'>T</span>oday <span className='lg:text-5xl text-pink-500'>O</span>ffer</h1>
             <p className='font-bold lg:text-4xl text-pink-500'>________</p>

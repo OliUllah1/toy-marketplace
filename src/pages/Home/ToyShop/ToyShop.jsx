@@ -51,12 +51,6 @@ const ToyShop = () => {
             </div>
 
 
-
-
-
-
-
-
             <div className="dropdown dropdown-left">
               <label tabIndex={0} className="px-10 font-semibold py-3 bg-slate-300 rounded-md flex items-center gap-2">Filter <FaFilter></FaFilter></label>
                 <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">

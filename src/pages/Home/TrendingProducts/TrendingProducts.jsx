@@ -6,7 +6,7 @@ import toy4 from '../../../assets/images/toy4.jpg'
 import { FaStar,FaStarHalfAlt } from "react-icons/fa";
 const TrendingProducts = () => {
   return (
-    <div className="py-10 bg-slate-100 rounded-lg px-2">
+    <div className="py-10 bg-slate-100 px-2">
       <div className="flex items-center pb-8">
         <h1 className="text-4xl font-semibold ">
           {" "}

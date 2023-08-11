@@ -50,7 +50,7 @@ const ToyCategory = () => {
         }
     }
     return (
-        <div className=" bg-slate-200 px-4 py-10 lg:rounded-xl">
+        <div className="bg-slate-200 px-4 py-10">
           <div className='flex items-center pb-8'>
             <h1 className='text-4xl font-semibold '> <span className=' lg:text-5xl text-pink-500'>T</span>oys <span className='lg:text-5xl text-pink-500'>C</span>ategory </h1>
             <p className='font-bold lg:text-4xl text-pink-500'>________</p>
