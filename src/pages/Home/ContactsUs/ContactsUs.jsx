@@ -12,7 +12,7 @@ const ContactsUs = () => {
           })
     }
     return (
-        <div className='py-5 bg-slate-50 rounded-lg px-2'>
+        <div className='py-5 lg:px-10 bg-slate-50 rounded-lg px-2'>
             <div className='flex items-center pb-8'>
             <h1 className=' text-4xl font-semibold '> <span className=' font-semibold text-5xl text-pink-500'>C</span>ontacts <span className='text-5xl text-pink-500'>U</span>s</h1>
             <p className='font-bold text-4xl text-pink-500'>_______</p>

@@ -153,9 +153,9 @@ const Navber = () => {
             </div>
   
             <div>
-            <button onClick={handleLogOut} className="px-8 rounded-lg py-2 btn-outline border btn-error">Log Out</button>
+            <button onClick={handleLogOut} className="px-8 text-white hover:bg-[#73a19a] rounded-full py-2 bg-[#f379a7]">Log Out</button>
             </div>
-          </div>:<Link to='/login'><button className="px-8 rounded-lg py-2 btn-outline border btn-info">Log In</button></Link>
+          </div>:<Link to='/login'><button className="px-8 text-white rounded-full py-2 bg-[#f379a7] hover:bg-[#73a19a]">Log In</button></Link>
         }
       </div>
       </div>

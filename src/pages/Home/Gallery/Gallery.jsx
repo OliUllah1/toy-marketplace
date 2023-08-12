@@ -9,11 +9,13 @@ const Gallery = () => {
     },[])
     return (
 
-        <div className=' bg-gray-300 px-5  pt-10'>
-            <div className='flex items-center pb-8'  data-aos="fade-down">
-            <h1 className=' text-4xl font-semibold '> <span className=' lg:text-5xl text-pink-500'>T</span>oys <span className=' lg:text-5xl text-pink-500'>G</span>allery </h1>
-            <p className='font-bold lg:text-4xl text-pink-500'>__________</p>
+        <div className='px-10 bg-slate-50  pt-10' data-aos="fade-down">
+            
+            <div className='text-center space-y-3 mb-5'>
+            <h1 className=' text-4xl font-semibold'> <span className=' lg:text-5xl text-pink-500'>T</span>oys <span className=' lg:text-5xl text-pink-500'>G</span>allery</h1>
+            <p className='text-gray-600 font-semibold'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br className='hidden lg:block' /> incididunt ut labore et dolore magna aliqua...</p>
             </div>
+           
             
             
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pb-10 gap-5'>
