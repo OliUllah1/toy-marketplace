@@ -19,8 +19,8 @@ const Home = () => {
             <Banner></Banner>
             <Facility></Facility>
             <BestProducts></BestProducts>
-            <OfferDay></OfferDay>
             <Gallery></Gallery>
+            <OfferDay></OfferDay>
             <ToyCategory></ToyCategory>
             <TrendingProducts></TrendingProducts>
             <OfferProduct></OfferProduct>

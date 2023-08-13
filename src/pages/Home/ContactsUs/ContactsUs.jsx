@@ -13,10 +13,11 @@ const ContactsUs = () => {
     }
     return (
         <div className='py-5 lg:px-10 bg-slate-50 rounded-lg px-2'>
-            <div className='flex items-center pb-8'>
-            <h1 className=' text-4xl font-semibold '> <span className=' font-semibold text-5xl text-pink-500'>C</span>ontacts <span className='text-5xl text-pink-500'>U</span>s</h1>
-            <p className='font-bold text-4xl text-pink-500'>_______</p>
-            </div>
+            <div className='text-center mb-10 space-y-3'>
+            <h1 className='text-4xl font-bold'> <span className=' lg:text-5xl text-pink-500'>C</span>ontacts <span className='lg:text-5xl text-pink-500'>U</span>s</h1>
+            <p className='text-gray-600 font-semibold'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br className='hidden lg:block' /> incididunt ut labore et dolore magna aliqua...</p>
+        </div>
+            
 
 
             <div className='lg:flex gap-5'>
@@ -35,7 +36,7 @@ const ContactsUs = () => {
                     <input type="text" placeholder="Subjects" className="input border border-gray-300 py-5 w-full h-full" />
                     </div>
                     <textarea className="textarea mb-1 border border-gray-300 h-36 w-full" placeholder="Message"></textarea>
-                    <input onClick={handleSendMessage} className="px-10 py-3 border rounded-md font-bold border-purple-400 hover:bg-pink-600 hover:border-0 hover:text-white" type="submit" value="Send Message" />
+                    <input onClick={handleSendMessage} className="main-btn" type="submit" value="Send Message" />
                     </form>
                 </div>
             </div>

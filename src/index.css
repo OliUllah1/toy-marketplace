@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.primary-btn{
+    @apply rounded-full border-0 px-5 py-3 text-white font-bold cursor-pointer  bg-[#f379a7] 
+}
+.main-btn{
+    @apply rounded-full border-0 px-5 py-3 text-white font-bold cursor-pointer  bg-[#f379a7] hover:bg-[#547e79] 
+}
+.secondary-btn{
+    @apply rounded-full border-0 px-5 py-3 text-white font-bold cursor-pointer bg-[#73a19a] 
+}

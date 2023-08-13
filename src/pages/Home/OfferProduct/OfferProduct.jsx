@@ -8,10 +8,11 @@ import { FaShoppingCart } from "react-icons/fa";
 const OfferProduct = () => {
     return (
         <div className='py-10 px-10 bg-slate-50'>
-            <div className='flex items-center pb-8'>
-            <h1 className='text-4xl font-semibold '> <span className=' lg:text-5xl text-pink-500'>T</span>oday <span className='lg:text-5xl text-pink-500'>O</span>ffer</h1>
-            <p className='font-bold lg:text-4xl text-pink-500'>________</p>
+            <div className='text-center mb-10 space-y-3'>
+            <h1 className='text-4xl font-bold'> <span className=' lg:text-5xl text-pink-500'>T</span>oday <span className='lg:text-5xl text-pink-500'>O</span>ffer</h1>
+            <p className='text-gray-600 font-semibold'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br className='hidden lg:block' /> incididunt ut labore et dolore magna aliqua...</p>
             </div>
+        
 
 
 
@@ -25,7 +26,7 @@ const OfferProduct = () => {
                      <div className="badge badge-secondary">50% off</div>
                      </h2>
                      <div className='flex justify-end mt-2'>
-                        <button  className="px-6 flex items-center gap-1 py-3 border rounded-md font-bold border-purple-400 hover:bg-pink-600 hover:border-0 hover:text-white">Add To Card <FaShoppingCart></FaShoppingCart></button>
+                        <button  className="flex items-center gap-1 main-btn">Add To Card <FaShoppingCart></FaShoppingCart></button>
                     </div>
                 </div>
             </div>
@@ -38,7 +39,7 @@ const OfferProduct = () => {
                      <div className="badge badge-secondary">50% off</div>
                      </h2>
                      <div className='flex justify-end mt-2'>
-                        <button  className="px-6 flex items-center gap-1 py-3 border rounded-md font-bold border-purple-400 hover:bg-pink-600 hover:border-0 hover:text-white">Add To Card <FaShoppingCart></FaShoppingCart></button>
+                        <button  className="flex items-center gap-1 main-btn">Add To Card <FaShoppingCart></FaShoppingCart></button>
                     </div>
                 </div>
             </div>
@@ -51,7 +52,7 @@ const OfferProduct = () => {
                      <div className="badge badge-secondary">50% off</div>
                      </h2>
                      <div className='flex justify-end mt-2'>
-                        <button  className="px-6 flex items-center gap-1 py-3 border rounded-md font-bold border-purple-400 hover:bg-pink-600 hover:border-0 hover:text-white">Add To Card <FaShoppingCart></FaShoppingCart></button>
+                        <button  className="flex items-center gap-1 main-btn">Add To Card <FaShoppingCart></FaShoppingCart></button>
                     </div>
                 </div>
             </div>
@@ -64,7 +65,7 @@ const OfferProduct = () => {
                      <div className="badge badge-secondary">50% off</div>
                      </h2>
                      <div className='flex justify-end mt-2'>
-                        <button  className="px-6 flex items-center gap-1 py-3 border rounded-md font-bold border-purple-400 hover:bg-pink-600 hover:border-0 hover:text-white">Add To Card <FaShoppingCart></FaShoppingCart></button>
+                        <button  className="flex items-center gap-1 main-btn">Add To Card <FaShoppingCart></FaShoppingCart></button>
                     </div>
                 </div>
             </div>
@@ -77,7 +78,7 @@ const OfferProduct = () => {
                      <div className="badge badge-secondary">50% off</div>
                      </h2>
                      <div className='flex justify-end mt-2'>
-                        <button  className="px-6 flex items-center gap-1 py-3 border rounded-md font-bold border-purple-400 hover:bg-pink-600 hover:border-0 hover:text-white">Add To Card <FaShoppingCart></FaShoppingCart></button>
+                        <button  className="flex items-center gap-1 main-btn">Add To Card <FaShoppingCart></FaShoppingCart></button>
                     </div>
                 </div>
             </div>
@@ -90,7 +91,7 @@ const OfferProduct = () => {
                      <div className="badge badge-secondary">50% off</div>
                      </h2>
                      <div className='flex justify-end mt-2'>
-                        <button  className="px-6 flex items-center gap-1 py-3 border rounded-md font-bold border-purple-400 hover:bg-pink-600 hover:border-0 hover:text-white">Add To Card <FaShoppingCart></FaShoppingCart></button>
+                        <button  className="flex items-center gap-1 main-btn">Add To Card <FaShoppingCart></FaShoppingCart></button>
                     </div>
                 </div>
             </div>

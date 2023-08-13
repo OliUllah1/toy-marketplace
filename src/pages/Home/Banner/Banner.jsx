@@ -1,22 +1,26 @@
-
-import banner from '../../../assets/images/banner.jpg';
+import banner from '../../../assets/images/banner/banner-bg.webp';
+import bannerTop from '../../../assets/images/banner/banner-top-bg.webp';
+import bannerBottom from '../../../assets/images/banner/banner-bottom-bg.webp';
+import bannerRight from '../../../assets/images/banner/banner-right-bg.webp';
 import { FaArrowRight } from "react-icons/fa";
 
 
 const Banner = () => {
     
     return (
-        <div className="carousel w-full lg:h-[550px] h-full">
-            <div id="slide1" className="carousel-item relative w-full">
-                <img src={banner} className="w-full object-cover" />
-            <div className="absolute w-full h-full text-white gap-5 transform bg-gradient-to-r from-[#616464] to-[rgba(21, 21, 21,0)]">
-            <div className='px-5 pt-5 lg:px-10 lg:pt-28'>
-            <h1 className='text-[#181d4e] text-xl lg:text-6xl font-bold lg:w-4/5 mb-5 z-10'>Pick the best toy for your beloved child from <span className='lg:text-6xl font-bold text-pink-500'>Toys</span> <span className=' text-yellow-400'>House</span></h1>
-            <p className='lg:w-2/3 font-semibold lg:text-xl text-gray-800'>A kids toy shop is a store that specializes in selling toys and games designed specifically for children.</p>
-            <button className='mt-2 px-5 py-2 lg:px-10 lg:py-3 font-semibold lg:font-bold rounded-full flex items-center gap-3 lg:mt-10 bg-[#f379a7] hover:bg-[#73a19a]'>SHOP NOW <FaArrowRight></FaArrowRight></button>
+        <div className="w-full relative lg:h-[550px] h-full" style={{backgroundImage:`url(${banner})`}}>
+        <img className='absolute top-0' src={bannerTop} alt="" />
+        <img className='absolute bottom-0' src={bannerBottom} alt="" />
+        <div className='flex items-center gap-5 px-10'>
+            <div className='w-full'>
+                <h1 className='font-bold text-7xl text-gray-800'>Best Kinds Store & Online Shop</h1>
+                <h5 className='my-4 font-bold text-2xl'>Give The Gift Of Your Children Everyday</h5>
+                <button className='mt-7 rounded-full border-0 px-10 py-4 text-white font-bold bg-[#f379a7] hover:bg-[#547e79]'>Shop This Now</button>
             </div>
+            <div className='w-full h-full'>
+            <img className='h-[520px]' src={bannerRight} alt="" />
             </div>
-        </div> 
+        </div>
   
         </div>
     );
