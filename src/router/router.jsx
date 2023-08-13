@@ -29,16 +29,16 @@ const router = createBrowserRouter([
         },
         {
             path:'/alltoys/:id',
-            element:<PrivateRouter><ToyDetails></ToyDetails></PrivateRouter>,
+            element:<ToyDetails></ToyDetails>,
             loader:({params})=>fetch(`https://toy-marketplace-server-flax.vercel.app/toys/${params.id}`)
         },
         {
             path:'/mytoys',
-            element:<PrivateRouter><MyToys></MyToys></PrivateRouter>
+            element:<MyToys></MyToys>
         },
         {
             path:'/addtoy',
-            element:<PrivateRouter><AddToy></AddToy></PrivateRouter>
+            element:<AddToy></AddToy>
         },
         {
             path:'/updatedtoy/:id',
