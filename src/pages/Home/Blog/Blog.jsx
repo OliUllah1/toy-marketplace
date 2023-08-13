@@ -12,7 +12,7 @@ const Blog = () => {
             <h1 className=' text-4xl font-bold'> <span className=' lg:text-5xl text-pink-500'>L</span>atest <span className=' lg:text-5xl text-pink-500'>B</span>log</h1>
             <p className='text-gray-600 font-semibold'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br className='hidden lg:block' /> incididunt ut labore et dolore magna aliqua...</p>
             </div>
-            <div className='grid grid-cols-3 gap-5'>
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>
                 <div>
                     <img src={blog1} alt="" />
                     <div className='mt-5 space-y-3'>

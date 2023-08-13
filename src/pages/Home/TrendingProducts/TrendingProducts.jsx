@@ -6,7 +6,7 @@ import toy4 from '../../../assets/images/toy4.jpg'
 import { FaStar,FaStarHalfAlt } from "react-icons/fa";
 const TrendingProducts = () => {
   return (
-    <div className="py-10 bg-slate-50 px-10">
+    <div className="py-10 bg-slate-50 px-2 lg:px-10">
       <div className='text-center mb-10 space-y-3'>
             <h1 className='text-4xl font-bold'> <span className=' lg:text-5xl text-pink-500'>T</span>rending <span className='lg:text-5xl text-pink-500'>P</span>roducts</h1>
             <p className='text-gray-600 font-semibold'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br className='hidden lg:block' /> incididunt ut labore et dolore magna aliqua...</p>
@@ -14,7 +14,7 @@ const TrendingProducts = () => {
       
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-        <div className="card w-full bg-base-100 shadow-xl">
+        <div className="card w-full bg-[#e4f6fe] shadow-xl">
           <figure className="p-5 pt-5">
             <img
               src={toy1}
@@ -29,7 +29,7 @@ const TrendingProducts = () => {
             <button className="main-btn">Shop Now</button>
           </div>
         </div>
-        <div className="card w-full bg-base-100 shadow-xl">
+        <div className="card w-full bg-[#e4f6fe] shadow-xl">
           <figure className="p-5 pt-5">
             <img
               src={toy3}
@@ -44,7 +44,7 @@ const TrendingProducts = () => {
             <button className="main-btn">Shop Now</button>
           </div>
         </div>
-        <div className="card w-full bg-base-100 shadow-xl">
+        <div className="card w-full bg-[#e4f6fe] shadow-xl">
           <figure className="p-5 pt-5">
             <img
               src={toy1}
@@ -59,7 +59,7 @@ const TrendingProducts = () => {
             <button className="main-btn">Shop Now</button>
           </div>
         </div>
-        <div className="card w-full bg-base-100 shadow-xl">
+        <div className="card w-full bg-[#e4f6fe] shadow-xl">
           <figure className="p-5 pt-5">
             <img
               src={toy4}

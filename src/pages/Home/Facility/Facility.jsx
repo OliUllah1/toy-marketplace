@@ -5,7 +5,7 @@ import phone from '../../../assets/images/logo/phone.webp'
 
 const Facility = () => {
     return (
-        <div className='bg-[#f379a7] py-8 px-10 grid grid-cols-2 lg:grid-cols-4'>
+        <div className='bg-[#f379a7] py-8 px-2 lg:px-10 grid grid-cols-2 lg:grid-cols-4'>
             
             <div className='flex items-center justify-center gap-5 lg:border-r-2'>
                 <img className='text-red-500' src={deliery} alt="" />
