@@ -10,6 +10,7 @@ import Facility from '../Facility/Facility';
 import BestProducts from '../BestProducts/BestProducts';
 import OfferDay from '../OfferDay/OfferDay';
 import Sponsor from '../Sponsor/Sponsor';
+import Blog from '../Blog/Blog';
 
 const Home = () => {
     useTitle('Home')
@@ -26,6 +27,7 @@ const Home = () => {
             <OfferProduct></OfferProduct>
             <Sponsor></Sponsor>
             <ContactsUs></ContactsUs>
+            <Blog></Blog>
             
         </div>
     );

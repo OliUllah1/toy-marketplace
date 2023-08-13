@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../../assets/images/toy-logo.png'
+import logo from '../../../assets/images/navber-logo.webp'
 import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Navber = () => {
@@ -92,9 +92,9 @@ const Navber = () => {
             </li>
           </ul>
         </div>
-        <div className='w-20 lg:w-20 kg:h-20 flex items-center'>
+        <div className=''>
         <img className="w-full h-full object-center" src={logo} alt="" />
-        <h3 className=' hidden lg:flex '><span className='text-3xl font-bold text-[#ff6600]'>T</span><span className='text-3xl font-bold text-sky-500'>O</span><span className='text-3xl font-bold text-[#99cc33]'>Y</span><span className='text-3xl font-bold text-pink-500'>S</span> <span className='ml-3 font-bold text-2xl mt-1 text-yellow-300 '>House</span></h3>
+        
         </div>
       </div>
       <div>

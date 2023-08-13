@@ -1,14 +1,14 @@
 import React from 'react';
-import logo from '../../../assets/images/toy-logo.png';
+import logo from '../../../assets/images/navber-logo.webp';
 import { FaMap,FaEnvelope,FaPhoneAlt } from "react-icons/fa";
 const Footer = () => {
     return (
       <div>
         <footer className="footer px-6 py-10 lg:p-10 bg-base-200 text-base-content">
         <div>
-        <div className='w-72 lg:w-28'>
+        <div className='mt-10'>
         <img className="w-full h-full object-center ml-5" src={logo} alt="" />
-        <h3 className=' hidden lg:flex '><span className='text-3xl font-bold text-[#ff6600]'>T</span><span className='text-3xl font-bold text-sky-500'>O</span><span className='text-3xl font-bold text-[#99cc33]'>Y</span><span className='text-3xl font-bold text-pink-500'>S</span> <span className='ml-3 font-bold text-2xl mt-1 text-yellow-300 '>House</span></h3>
+        
         </div>
     <p className='font-semibold mt-3 lg:mt-0 text-gray-600'>A kids toy shop is a store that  specializes<br /> in selling toys and games designed <br /> specifically for children.</p>
     <p className='flex items-center font-semibold gap-3'><FaMap className='text-xl text-pink-600'></FaMap>Address: Dhaka,Bangladesh</p>

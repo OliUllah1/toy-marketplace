@@ -8,6 +8,9 @@
 .main-btn{
     @apply rounded-full border-0 px-5 py-3 text-white font-bold cursor-pointer  bg-[#f379a7] hover:bg-[#547e79] 
 }
+.blog-btn{
+    @apply rounded-full border-0 px-7 py-[10px] text-white font-bold  bg-[#547e79] hover:bg-[#f379a7] 
+}
 .secondary-btn{
     @apply rounded-full border-0 px-5 py-3 text-white font-bold cursor-pointer bg-[#73a19a] 
 }
